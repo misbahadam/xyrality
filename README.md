@@ -23,7 +23,7 @@ This is a Vue.js 3 application that fetches and displays a list of gaming worlds
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/gaming-world-vueapp.git
+   git clone https://github.com/misbahadam/xyrality.git
    ```
 
 2. Navigate to the project directory:
