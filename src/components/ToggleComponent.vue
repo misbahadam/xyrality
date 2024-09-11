@@ -3,7 +3,7 @@
     class="w-14 h-8 flex items-center bg-gray-300 rounded-full p-1 duration-300 cursor-pointer"
     :class="{ 'bg-green-500': value }"
     :aria-checked="value.toString()"
-    @click="toggle"
+    @click="toggleSort"
   >
     <div
       class="bg-white w-6 h-6 rounded-full shadow-md transform duration-300"
@@ -21,9 +21,9 @@ export default {
     }
   },
   methods: {
-    toggle() {
-      console.log('Toggling:', !this.value)
-      this.$emit('update:value', !this.value)
+    toggleSort() {
+      console.log('Toggling:', this.value)
+      this.$emit('toggle-sort', !this.value)
     }
   }
 }

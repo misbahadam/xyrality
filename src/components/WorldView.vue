@@ -8,10 +8,14 @@
     <!-- World list data fetched -->
     <div v-else-if="worldStore?.worlds?.length > 0">
       <!-- Sort Toggle using ToggleComponent -->
-      <div class="flex items-center justify-between mb-4">
+      <div class="flex items-center justify-center mb-6">
         <div class="flex items-center">
-          <ToggleComponent v-model="isSortByName" />
-          <span class="ml-3 text-lg">{{ isSortByName ? 'Sort by Name' : 'Sort by ID' }}</span>
+          <ToggleComponent
+            v-model="isSortByName"
+            v-bind:value="isSortByName"
+            @toggle-sort="toggle"
+          />
+          <span class="ml-3 text-lg">{{ isSortByName ? 'Sort by ID' : 'Sort by Name' }}</span>
         </div>
       </div>
 
@@ -26,6 +30,9 @@
           <img :src="world.flag_url" alt="World Flag" class="w-12 h-12 mb-3 mx-auto" />
           <div class="text-center">
             <h3 class="text-xl font-semibold">{{ world.name }}</h3>
+            <p class="text-sm text-gray-400">
+              {{ world.id }}
+            </p>
             <p class="text-sm text-gray-400">
               {{ world.country_code }} - {{ world.language_code }}
             </p>
@@ -53,6 +60,11 @@ import ToggleComponent from './ToggleComponent.vue'
 export default {
   components: {
     ToggleComponent // Register the component here
+  },
+  methods: {
+    toggle() {
+      this.isSortByName = !this.isSortByName
+    }
   },
   setup() {
     const worldStore = useWorldStore()
