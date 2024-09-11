@@ -18,6 +18,27 @@ This is a Vue.js 3 application that fetches and displays a list of gaming worlds
 - Node.js (>= 14.x)
 - npm (>= 6.x)
 
+## Dependencies
+
+The project uses the following dependencies:
+
+- **vue**: ^3.4.29
+- **pinia**: ^2.2.2
+- **axios**: ^1.7.7
+- **vue-router**: ^4.3.3
+- **flowbite**: ^2.5.1
+- **tailwindcss**: ^3.4.10
+
+## Dev Dependencies
+
+The project uses the following dev dependencies:
+
+- **vite**: ^5.3.1
+- **eslint**: ^8.57.0
+- **prettier**: ^3.2.5
+- **vitest**: ^1.6.0
+- **cypress**: ^13.12.0
+
 ### Project Setup
 
 1. Clone the repository:
